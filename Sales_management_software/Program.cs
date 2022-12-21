@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sales_management_software.PL;
 
 namespace Sales_management_software
 {
@@ -16,7 +17,7 @@ namespace Sales_management_software
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new FRM_START());
            
 
             

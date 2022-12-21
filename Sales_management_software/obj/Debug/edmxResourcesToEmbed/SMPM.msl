@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_SMPModelStoreContainer" CdmEntityContainer="DB_SMPEntities">
+    <EntitySetMapping Name="TB_CAT">
+      <EntityTypeMapping TypeName="DB_SMPModel.TB_CAT">
+        <MappingFragment StoreEntitySet="TB_CAT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CAT_Name" ColumnName="CAT_Name" />
+          <ScalarProperty Name="CAT_Cover" ColumnName="CAT_Cover" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

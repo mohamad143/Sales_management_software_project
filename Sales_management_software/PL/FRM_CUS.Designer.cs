@@ -50,8 +50,8 @@
             this.tileView1 = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.tBSuppBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colID = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colCus_name = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colCus_phone = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colCus_name = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colCus_location = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colCus_image = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.panel1.SuspendLayout();
@@ -168,7 +168,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(Sales_management_software.TB_CuS);
+            this.gridControl1.DataSource = typeof(Sales_management_software.DB.TB_CuS);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.tileView1;
@@ -182,8 +182,8 @@
             // 
             this.tileView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
-            this.colCus_name,
             this.colCus_phone,
+            this.colCus_name,
             this.colCus_location,
             this.colCus_image});
             this.tileView1.GridControl = this.gridControl1;
@@ -199,23 +199,17 @@
             this.tileView1.TileRows.Add(tableRowDefinition2);
             this.tileView1.TileRows.Add(tableRowDefinition3);
             this.tileView1.TileRows.Add(tableRowDefinition4);
-            tileViewItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14F);
-            tileViewItemElement1.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement1.Column = this.colCus_name;
             tileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
             tileViewItemElement1.Text = "colCus_name";
             tileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14F);
-            tileViewItemElement2.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement2.Column = this.colCus_phone;
             tileViewItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
             tileViewItemElement2.RowIndex = 1;
             tileViewItemElement2.Text = "colCus_phone";
             tileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14F);
-            tileViewItemElement3.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement3.Column = this.colCus_location;
             tileViewItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
@@ -246,23 +240,23 @@
             this.colID.VisibleIndex = 0;
             this.colID.Width = 94;
             // 
-            // colCus_name
-            // 
-            this.colCus_name.FieldName = "Cus_name";
-            this.colCus_name.MinWidth = 25;
-            this.colCus_name.Name = "colCus_name";
-            this.colCus_name.Visible = true;
-            this.colCus_name.VisibleIndex = 1;
-            this.colCus_name.Width = 94;
-            // 
             // colCus_phone
             // 
             this.colCus_phone.FieldName = "Cus_phone";
             this.colCus_phone.MinWidth = 25;
             this.colCus_phone.Name = "colCus_phone";
             this.colCus_phone.Visible = true;
-            this.colCus_phone.VisibleIndex = 2;
+            this.colCus_phone.VisibleIndex = 1;
             this.colCus_phone.Width = 94;
+            // 
+            // colCus_name
+            // 
+            this.colCus_name.FieldName = "Cus_name";
+            this.colCus_name.MinWidth = 25;
+            this.colCus_name.Name = "colCus_name";
+            this.colCus_name.Visible = true;
+            this.colCus_name.VisibleIndex = 2;
+            this.colCus_name.Width = 94;
             // 
             // colCus_location
             // 
@@ -318,8 +312,8 @@
       
         private System.Windows.Forms.BindingSource tBSuppBindingSource;
         private DevExpress.XtraGrid.Columns.TileViewColumn colID;
-        private DevExpress.XtraGrid.Columns.TileViewColumn colCus_name;
         private DevExpress.XtraGrid.Columns.TileViewColumn colCus_phone;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colCus_name;
         private DevExpress.XtraGrid.Columns.TileViewColumn colCus_location;
         private DevExpress.XtraGrid.Columns.TileViewColumn colCus_image;
     }

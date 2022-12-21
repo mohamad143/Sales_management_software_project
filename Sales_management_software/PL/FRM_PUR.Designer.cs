@@ -38,17 +38,17 @@
             this.pn_cat = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colPur_Name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPur_Type = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Cat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Sup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Det = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Buy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Sell = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Qt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPur_Type = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Tbuy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_Tsell = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPur_TRev = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPur_Name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.pn_cat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -162,7 +162,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(Sales_management_software.TB_Pur);
+            this.gridControl1.DataSource = typeof(Sales_management_software.DB.TB_Pur);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -188,26 +188,6 @@
             this.colPur_TRev});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // colPur_Name
-            // 
-            this.colPur_Name.Caption = "product name ";
-            this.colPur_Name.FieldName = "Pur_Name";
-            this.colPur_Name.MinWidth = 25;
-            this.colPur_Name.Name = "colPur_Name";
-            this.colPur_Name.Visible = true;
-            this.colPur_Name.VisibleIndex = 0;
-            this.colPur_Name.Width = 94;
-            // 
-            // colPur_Type
-            // 
-            this.colPur_Type.Caption = "product type";
-            this.colPur_Type.FieldName = "Pur_Type";
-            this.colPur_Type.MinWidth = 25;
-            this.colPur_Type.Name = "colPur_Type";
-            this.colPur_Type.Visible = true;
-            this.colPur_Type.VisibleIndex = 1;
-            this.colPur_Type.Width = 94;
             // 
             // colPur_Cat
             // 
@@ -241,7 +221,7 @@
             // 
             // colPur_Buy
             // 
-            this.colPur_Buy.Caption = "Purchasing price";
+            this.colPur_Buy.Caption = "purchasing price";
             this.colPur_Buy.FieldName = "Pur_Buy";
             this.colPur_Buy.MinWidth = 25;
             this.colPur_Buy.Name = "colPur_Buy";
@@ -261,7 +241,7 @@
             // 
             // colPur_Qt
             // 
-            this.colPur_Qt.Caption = "Quantity";
+            this.colPur_Qt.Caption = "quantity";
             this.colPur_Qt.FieldName = "Pur_Qt";
             this.colPur_Qt.MinWidth = 25;
             this.colPur_Qt.Name = "colPur_Qt";
@@ -269,9 +249,19 @@
             this.colPur_Qt.VisibleIndex = 7;
             this.colPur_Qt.Width = 94;
             // 
+            // colPur_Type
+            // 
+            this.colPur_Type.Caption = "product type";
+            this.colPur_Type.FieldName = "Pur_Type";
+            this.colPur_Type.MinWidth = 25;
+            this.colPur_Type.Name = "colPur_Type";
+            this.colPur_Type.Visible = true;
+            this.colPur_Type.VisibleIndex = 1;
+            this.colPur_Type.Width = 94;
+            // 
             // colPur_Tbuy
             // 
-            this.colPur_Tbuy.Caption = "Purchases (total price)";
+            this.colPur_Tbuy.Caption = "purchases(total price)";
             this.colPur_Tbuy.FieldName = "Pur_Tbuy";
             this.colPur_Tbuy.MinWidth = 25;
             this.colPur_Tbuy.Name = "colPur_Tbuy";
@@ -281,7 +271,7 @@
             // 
             // colPur_Tsell
             // 
-            this.colPur_Tsell.Caption = "sales (total price)";
+            this.colPur_Tsell.Caption = "sales(total price)";
             this.colPur_Tsell.FieldName = "Pur_Tsell";
             this.colPur_Tsell.MinWidth = 25;
             this.colPur_Tsell.Name = "colPur_Tsell";
@@ -298,6 +288,16 @@
             this.colPur_TRev.Visible = true;
             this.colPur_TRev.VisibleIndex = 10;
             this.colPur_TRev.Width = 94;
+            // 
+            // colPur_Name
+            // 
+            this.colPur_Name.Caption = "product name";
+            this.colPur_Name.FieldName = "Pur_Name";
+            this.colPur_Name.MinWidth = 25;
+            this.colPur_Name.Name = "colPur_Name";
+            this.colPur_Name.Visible = true;
+            this.colPur_Name.VisibleIndex = 0;
+            this.colPur_Name.Width = 94;
             // 
             // FRM_PUR
             // 

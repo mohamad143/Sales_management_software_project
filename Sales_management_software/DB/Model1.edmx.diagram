@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9227c112f2d9439abc667d2a0d15d319" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_SMPModel.TB_CAT" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SMPModel.TB_CuS" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SMPModel.TB_Pur" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SMPModel.TB_Sell" Width="1.5" PointX="0.875" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SMPModel.TB_Supp" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SMPModel.TB_Users" Width="1.5" PointX="4.125" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="DB_SMPModel.FK_TB_Pur_TB_CAT" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_SMPModel.FK_TB_Pur_TB_Supp" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

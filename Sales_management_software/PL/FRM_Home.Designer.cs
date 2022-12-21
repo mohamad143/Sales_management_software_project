@@ -31,36 +31,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Home));
             this.pn_home = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_update = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_add_cat = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_buy = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_add_cus = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_add_pur = new DevExpress.XtraEditors.SimpleButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_cat = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_sup = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lb_pur = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lb_cus = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lb_sales = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btn_add_Suppliers = new DevExpress.XtraEditors.SimpleButton();
             this.pn_home.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -74,8 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuCards5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.bunifuCards6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_home
@@ -90,81 +85,87 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.simpleButton1);
-            this.panel2.Controls.Add(this.simpleButton2);
-            this.panel2.Controls.Add(this.simpleButton5);
-            this.panel2.Controls.Add(this.simpleButton4);
-            this.panel2.Controls.Add(this.simpleButton3);
+            this.panel2.Controls.Add(this.btn_add_Suppliers);
+            this.panel2.Controls.Add(this.btn_update);
+            this.panel2.Controls.Add(this.btn_add_cat);
+            this.panel2.Controls.Add(this.btn_buy);
+            this.panel2.Controls.Add(this.btn_add_cus);
+            this.panel2.Controls.Add(this.btn_add_pur);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 618);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 102);
             this.panel2.TabIndex = 1;
             // 
-            // simpleButton1
+            // btn_update
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
-            this.simpleButton1.Location = new System.Drawing.Point(69, 27);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(146, 61);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "add Categorie";
+            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_update.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.btn_update.Appearance.Options.UseFont = true;
+            this.btn_update.ImageOptions.Image = global::Sales_management_software.Properties.Resources.refreshallpivottable_32x32;
+            this.btn_update.Location = new System.Drawing.Point(891, 27);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(125, 61);
+            this.btn_update.TabIndex = 10;
+            this.btn_update.Text = "Update";
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // simpleButton2
+            // btn_add_cat
             // 
-            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
-            this.simpleButton2.Location = new System.Drawing.Point(225, 28);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(146, 61);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "buying process";
+            this.btn_add_cat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_add_cat.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.btn_add_cat.Appearance.Options.UseFont = true;
+            this.btn_add_cat.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
+            this.btn_add_cat.Location = new System.Drawing.Point(14, 29);
+            this.btn_add_cat.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_cat.Name = "btn_add_cat";
+            this.btn_add_cat.Size = new System.Drawing.Size(168, 61);
+            this.btn_add_cat.TabIndex = 6;
+            this.btn_add_cat.Text = "add Categorie";
+            this.btn_add_cat.Click += new System.EventHandler(this.btn_add_cat_Click);
             // 
-            // simpleButton5
+            // btn_buy
             // 
-            this.simpleButton5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
-            this.simpleButton5.Location = new System.Drawing.Point(750, 26);
-            this.simpleButton5.Margin = new System.Windows.Forms.Padding(5);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(146, 61);
-            this.simpleButton5.TabIndex = 4;
-            this.simpleButton5.Text = "sale";
+            this.btn_buy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_buy.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.btn_buy.Appearance.Options.UseFont = true;
+            this.btn_buy.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
+            this.btn_buy.Location = new System.Drawing.Point(183, 29);
+            this.btn_buy.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_buy.Name = "btn_buy";
+            this.btn_buy.Size = new System.Drawing.Size(168, 61);
+            this.btn_buy.TabIndex = 5;
+            this.btn_buy.Text = "buying process";
+            this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
             // 
-            // simpleButton4
+            // btn_add_cus
             // 
-            this.simpleButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
-            this.simpleButton4.Location = new System.Drawing.Point(569, 27);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(5);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(146, 61);
-            this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "add customer";
+            this.btn_add_cus.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_add_cus.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.btn_add_cus.Appearance.Options.UseFont = true;
+            this.btn_add_cus.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
+            this.btn_add_cus.Location = new System.Drawing.Point(524, 29);
+            this.btn_add_cus.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_cus.Name = "btn_add_cus";
+            this.btn_add_cus.Size = new System.Drawing.Size(160, 61);
+            this.btn_add_cus.TabIndex = 3;
+            this.btn_add_cus.Text = "add customer";
+            this.btn_add_cus.Click += new System.EventHandler(this.btn_add_cus_Click);
             // 
-            // simpleButton3
+            // btn_add_pur
             // 
-            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
-            this.simpleButton3.Location = new System.Drawing.Point(391, 28);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(5);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(146, 61);
-            this.simpleButton3.TabIndex = 2;
-            this.simpleButton3.Text = "add Purchase";
+            this.btn_add_pur.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_add_pur.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.btn_add_pur.Appearance.Options.UseFont = true;
+            this.btn_add_pur.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
+            this.btn_add_pur.Location = new System.Drawing.Point(352, 29);
+            this.btn_add_pur.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_pur.Name = "btn_add_pur";
+            this.btn_add_pur.Size = new System.Drawing.Size(172, 61);
+            this.btn_add_pur.TabIndex = 2;
+            this.btn_add_pur.Text = "add Purchase";
+            this.btn_add_pur.Click += new System.EventHandler(this.btn_add_pur_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -173,7 +174,6 @@
             this.flowLayoutPanel1.Controls.Add(this.bunifuCards3);
             this.flowLayoutPanel1.Controls.Add(this.bunifuCards4);
             this.flowLayoutPanel1.Controls.Add(this.bunifuCards5);
-            this.flowLayoutPanel1.Controls.Add(this.bunifuCards6);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -187,7 +187,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
-            this.bunifuCards1.Controls.Add(this.label2);
+            this.bunifuCards1.Controls.Add(this.lb_cat);
             this.bunifuCards1.Controls.Add(this.label1);
             this.bunifuCards1.Controls.Add(this.pictureBox1);
             this.bunifuCards1.LeftSahddow = false;
@@ -198,15 +198,15 @@
             this.bunifuCards1.Size = new System.Drawing.Size(276, 201);
             this.bunifuCards1.TabIndex = 0;
             // 
-            // label2
+            // lb_cat
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 65);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "33";
+            this.lb_cat.AutoSize = true;
+            this.lb_cat.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cat.Location = new System.Drawing.Point(20, 30);
+            this.lb_cat.Name = "lb_cat";
+            this.lb_cat.Size = new System.Drawing.Size(86, 65);
+            this.lb_cat.TabIndex = 3;
+            this.lb_cat.Text = "33";
             // 
             // label1
             // 
@@ -234,7 +234,7 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.Tomato;
-            this.bunifuCards2.Controls.Add(this.label3);
+            this.bunifuCards2.Controls.Add(this.lb_sup);
             this.bunifuCards2.Controls.Add(this.label4);
             this.bunifuCards2.Controls.Add(this.pictureBox2);
             this.bunifuCards2.LeftSahddow = false;
@@ -245,15 +245,15 @@
             this.bunifuCards2.Size = new System.Drawing.Size(276, 201);
             this.bunifuCards2.TabIndex = 1;
             // 
-            // label3
+            // lb_sup
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 65);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "33";
+            this.lb_sup.AutoSize = true;
+            this.lb_sup.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sup.Location = new System.Drawing.Point(20, 30);
+            this.lb_sup.Name = "lb_sup";
+            this.lb_sup.Size = new System.Drawing.Size(86, 65);
+            this.lb_sup.TabIndex = 3;
+            this.lb_sup.Text = "33";
             // 
             // label4
             // 
@@ -281,7 +281,7 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.Tomato;
-            this.bunifuCards3.Controls.Add(this.label5);
+            this.bunifuCards3.Controls.Add(this.lb_pur);
             this.bunifuCards3.Controls.Add(this.label6);
             this.bunifuCards3.Controls.Add(this.pictureBox3);
             this.bunifuCards3.LeftSahddow = false;
@@ -292,15 +292,15 @@
             this.bunifuCards3.Size = new System.Drawing.Size(276, 201);
             this.bunifuCards3.TabIndex = 2;
             // 
-            // label5
+            // lb_pur
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 65);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "33";
+            this.lb_pur.AutoSize = true;
+            this.lb_pur.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_pur.Location = new System.Drawing.Point(20, 30);
+            this.lb_pur.Name = "lb_pur";
+            this.lb_pur.Size = new System.Drawing.Size(86, 65);
+            this.lb_pur.TabIndex = 3;
+            this.lb_pur.Text = "33";
             // 
             // label6
             // 
@@ -328,7 +328,7 @@
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = true;
             this.bunifuCards4.color = System.Drawing.Color.Tomato;
-            this.bunifuCards4.Controls.Add(this.label7);
+            this.bunifuCards4.Controls.Add(this.lb_cus);
             this.bunifuCards4.Controls.Add(this.label8);
             this.bunifuCards4.Controls.Add(this.pictureBox4);
             this.bunifuCards4.LeftSahddow = false;
@@ -339,15 +339,15 @@
             this.bunifuCards4.Size = new System.Drawing.Size(276, 201);
             this.bunifuCards4.TabIndex = 3;
             // 
-            // label7
+            // lb_cus
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 65);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "33";
+            this.lb_cus.AutoSize = true;
+            this.lb_cus.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cus.Location = new System.Drawing.Point(20, 30);
+            this.lb_cus.Name = "lb_cus";
+            this.lb_cus.Size = new System.Drawing.Size(86, 65);
+            this.lb_cus.TabIndex = 3;
+            this.lb_cus.Text = "33";
             // 
             // label8
             // 
@@ -375,7 +375,7 @@
             this.bunifuCards5.BorderRadius = 5;
             this.bunifuCards5.BottomSahddow = true;
             this.bunifuCards5.color = System.Drawing.Color.Tomato;
-            this.bunifuCards5.Controls.Add(this.label9);
+            this.bunifuCards5.Controls.Add(this.lb_sales);
             this.bunifuCards5.Controls.Add(this.label10);
             this.bunifuCards5.Controls.Add(this.pictureBox5);
             this.bunifuCards5.LeftSahddow = false;
@@ -386,15 +386,15 @@
             this.bunifuCards5.Size = new System.Drawing.Size(276, 201);
             this.bunifuCards5.TabIndex = 4;
             // 
-            // label9
+            // lb_sales
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 65);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "33";
+            this.lb_sales.AutoSize = true;
+            this.lb_sales.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sales.Location = new System.Drawing.Point(20, 30);
+            this.lb_sales.Name = "lb_sales";
+            this.lb_sales.Size = new System.Drawing.Size(86, 65);
+            this.lb_sales.TabIndex = 3;
+            this.lb_sales.Text = "33";
             // 
             // label10
             // 
@@ -416,52 +416,19 @@
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
-            // bunifuCards6
+            // btn_add_Suppliers
             // 
-            this.bunifuCards6.BackColor = System.Drawing.Color.White;
-            this.bunifuCards6.BorderRadius = 5;
-            this.bunifuCards6.BottomSahddow = true;
-            this.bunifuCards6.color = System.Drawing.Color.Tomato;
-            this.bunifuCards6.Controls.Add(this.label11);
-            this.bunifuCards6.Controls.Add(this.label12);
-            this.bunifuCards6.Controls.Add(this.pictureBox6);
-            this.bunifuCards6.LeftSahddow = false;
-            this.bunifuCards6.Location = new System.Drawing.Point(587, 230);
-            this.bunifuCards6.Name = "bunifuCards6";
-            this.bunifuCards6.RightSahddow = true;
-            this.bunifuCards6.ShadowDepth = 20;
-            this.bunifuCards6.Size = new System.Drawing.Size(276, 201);
-            this.bunifuCards6.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 65);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "33";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(81, 132);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 30);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Reports";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(135, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(138, 104);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
+            this.btn_add_Suppliers.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_add_Suppliers.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.btn_add_Suppliers.Appearance.Options.UseFont = true;
+            this.btn_add_Suppliers.ImageOptions.Image = global::Sales_management_software.Properties.Resources.addfile_32x32;
+            this.btn_add_Suppliers.Location = new System.Drawing.Point(684, 29);
+            this.btn_add_Suppliers.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_Suppliers.Name = "btn_add_Suppliers";
+            this.btn_add_Suppliers.Size = new System.Drawing.Size(176, 61);
+            this.btn_add_Suppliers.TabIndex = 11;
+            this.btn_add_Suppliers.Text = "add Supplier";
+            this.btn_add_Suppliers.Click += new System.EventHandler(this.btn_add_Suppliers_Click);
             // 
             // FRM_Home
             // 
@@ -491,9 +458,6 @@
             this.bunifuCards5.ResumeLayout(false);
             this.bunifuCards5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.bunifuCards6.ResumeLayout(false);
-            this.bunifuCards6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,32 +468,29 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         public System.Windows.Forms.Panel pn_home;
+        public DevExpress.XtraEditors.SimpleButton btn_add_cat;
+        public DevExpress.XtraEditors.SimpleButton btn_buy;
+        public DevExpress.XtraEditors.SimpleButton btn_add_cus;
+        public DevExpress.XtraEditors.SimpleButton btn_add_pur;
+        private DevExpress.XtraEditors.SimpleButton btn_update;
+        public System.Windows.Forms.Label lb_cat;
+        public System.Windows.Forms.Label lb_sup;
+        public System.Windows.Forms.Label lb_pur;
+        public System.Windows.Forms.Label lb_cus;
+        public System.Windows.Forms.Label lb_sales;
+        public DevExpress.XtraEditors.SimpleButton btn_add_Suppliers;
     }
 }

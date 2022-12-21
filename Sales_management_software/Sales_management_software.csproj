@@ -36,19 +36,31 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Google Drive\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v22.1.Win, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -253,7 +265,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add\FRM_CAT_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\FRM_CAT_ADD.Designer.cs">
+      <DependentUpon>FRM_CAT_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\FRM_CUS_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\FRM_CUS_ADD.Designer.cs">
+      <DependentUpon>FRM_CUS_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\FRM_PUR_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\FRM_PUR_ADD.Designer.cs">
+      <DependentUpon>FRM_PUR_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\FRM_SELL_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\FRM_SELL_ADD.Designer.cs">
+      <DependentUpon>FRM_SELL_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\FRM_SUPP_ADD .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\FRM_SUPP_ADD .Designer.cs">
+      <DependentUpon>FRM_SUPP_ADD .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\FRM_USERS_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\FRM_USERS_ADD.Designer.cs">
+      <DependentUpon>FRM_USERS_ADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="BL\Methods.cs" />
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TB_CAT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TB_CuS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TB_Pur.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TB_Sell.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TB_Supp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TB_Users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="EPL\Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,29 +353,11 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\FRM_SELL_ADD.cs">
+    <Compile Include="PL\FRM_Cat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\FRM_SELL_ADD.Designer.cs">
-      <DependentUpon>FRM_SELL_ADD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\FRM_SELL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\FRM_SELL.Designer.cs">
-      <DependentUpon>FRM_SELL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\FRM_PUR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\FRM_PUR.Designer.cs">
-      <DependentUpon>FRM_PUR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\FRM_PUR_ADD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\FRM_PUR_ADD.Designer.cs">
-      <DependentUpon>FRM_PUR_ADD.cs</DependentUpon>
+    <Compile Include="PL\FRM_Cat.Designer.cs">
+      <DependentUpon>FRM_Cat.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\FRM_CUS.cs">
       <SubType>Form</SubType>
@@ -302,17 +365,41 @@
     <Compile Include="PL\FRM_CUS.Designer.cs">
       <DependentUpon>FRM_CUS.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\FRM_CUS_ADD.cs">
+    <Compile Include="PL\FRM_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\FRM_CUS_ADD.Designer.cs">
-      <DependentUpon>FRM_CUS_ADD.cs</DependentUpon>
+    <Compile Include="PL\FRM_Home.Designer.cs">
+      <DependentUpon>FRM_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\FRM_SUPP_ADD .cs">
+    <Compile Include="PL\FRM_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\FRM_SUPP_ADD .Designer.cs">
-      <DependentUpon>FRM_SUPP_ADD .cs</DependentUpon>
+    <Compile Include="PL\FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_PUR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_PUR.Designer.cs">
+      <DependentUpon>FRM_PUR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Report.Designer.cs">
+      <DependentUpon>FRM_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SELL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SELL.Designer.cs">
+      <DependentUpon>FRM_SELL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_START.Designer.cs">
+      <DependentUpon>FRM_START.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\FRM_SUPP.cs">
       <SubType>Form</SubType>
@@ -320,56 +407,56 @@
     <Compile Include="PL\FRM_SUPP.Designer.cs">
       <DependentUpon>FRM_SUPP.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\FRM_Cat.cs">
+    <Compile Include="PL\FRM_Users.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\FRM_Cat.Designer.cs">
-      <DependentUpon>FRM_Cat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\FRM_CAT_ADD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\FRM_CAT_ADD.Designer.cs">
-      <DependentUpon>FRM_CAT_ADD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\FRM_Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\FRM_Home.Designer.cs">
-      <DependentUpon>FRM_Home.cs</DependentUpon>
+    <Compile Include="PL\FRM_Users.Designer.cs">
+      <DependentUpon>FRM_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SMPModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SMPModel.Context.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SMPModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SMPModel.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
-    <Compile Include="SMPModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SMPModel.edmx</DependentUpon>
+    <Compile Include="Reports\XtraReport2.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TB_CAT.cs">
-      <DependentUpon>SMPModel.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
     </Compile>
-    <Compile Include="TB_CuS.cs">
-      <DependentUpon>SMPModel.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport3.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TB_Pur.cs">
-      <DependentUpon>SMPModel.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport3.Designer.cs">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
     </Compile>
-    <Compile Include="TB_Sell.cs">
-      <DependentUpon>SMPModel.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport4.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TB_Supp.cs">
-      <DependentUpon>SMPModel.tt</DependentUpon>
+    <Compile Include="Reports\XtraReport4.Designer.cs">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add\FRM_CAT_ADD.resx">
+      <DependentUpon>FRM_CAT_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\FRM_CUS_ADD.resx">
+      <DependentUpon>FRM_CUS_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\FRM_PUR_ADD.resx">
+      <DependentUpon>FRM_PUR_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\FRM_SELL_ADD.resx">
+      <DependentUpon>FRM_SELL_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\FRM_SUPP_ADD .resx">
+      <DependentUpon>FRM_SUPP_ADD .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\FRM_USERS_ADD.resx">
+      <DependentUpon>FRM_USERS_ADD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EPL\Dialog.resx">
       <DependentUpon>Dialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,38 +466,35 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_SELL_ADD.resx">
-      <DependentUpon>FRM_SELL_ADD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_SELL.resx">
-      <DependentUpon>FRM_SELL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_PUR.resx">
-      <DependentUpon>FRM_PUR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_PUR_ADD.resx">
-      <DependentUpon>FRM_PUR_ADD.cs</DependentUpon>
+    <EmbeddedResource Include="PL\FRM_Cat.resx">
+      <DependentUpon>FRM_Cat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_CUS.resx">
       <DependentUpon>FRM_CUS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_CUS_ADD.resx">
-      <DependentUpon>FRM_CUS_ADD.cs</DependentUpon>
+    <EmbeddedResource Include="PL\FRM_Home.resx">
+      <DependentUpon>FRM_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_SUPP_ADD .resx">
-      <DependentUpon>FRM_SUPP_ADD .cs</DependentUpon>
+    <EmbeddedResource Include="PL\FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_PUR.resx">
+      <DependentUpon>FRM_PUR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Report.resx">
+      <DependentUpon>FRM_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SELL.resx">
+      <DependentUpon>FRM_SELL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_START.resx">
+      <DependentUpon>FRM_START.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_SUPP.resx">
       <DependentUpon>FRM_SUPP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_Cat.resx">
-      <DependentUpon>FRM_Cat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_CAT_ADD.resx">
-      <DependentUpon>FRM_CAT_ADD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\FRM_Home.resx">
-      <DependentUpon>FRM_Home.cs</DependentUpon>
+    <EmbeddedResource Include="PL\FRM_Users.resx">
+      <DependentUpon>FRM_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -423,6 +507,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport3.resx">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport4.resx">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <EntityDeploy Include="DB\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -433,18 +537,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="SMPModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SMPModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="SMPModel.edmx.diagram">
-      <DependentUpon>SMPModel.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\assigntome_32x32.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\addfile_32x32.png" />
   </ItemGroup>
@@ -462,18 +568,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SMPModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SMPModel.edmx</DependentUpon>
-      <LastGenOutput>SMPModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SMPModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SMPModel.edmx</DependentUpon>
-      <LastGenOutput>SMPModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

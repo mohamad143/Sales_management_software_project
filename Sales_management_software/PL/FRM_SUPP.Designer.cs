@@ -38,10 +38,6 @@
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement2 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement3 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement4 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            this.colSupp_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colSupp_Phone = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colSupp_Email = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colSupp_Image = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.edt_search = new System.Windows.Forms.TextBox();
@@ -51,51 +47,19 @@
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.pn_cat = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.tBSuppBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tileView1 = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.tBSuppBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colID = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colSupp_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colSupp_Phone = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colSupp_Email = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colSupp_Image = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.panel1.SuspendLayout();
             this.pn_cat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBSuppBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBSuppBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // colSupp_Name
-            // 
-            this.colSupp_Name.FieldName = "Supp_Name";
-            this.colSupp_Name.MinWidth = 25;
-            this.colSupp_Name.Name = "colSupp_Name";
-            this.colSupp_Name.Visible = true;
-            this.colSupp_Name.VisibleIndex = 1;
-            this.colSupp_Name.Width = 94;
-            // 
-            // colSupp_Phone
-            // 
-            this.colSupp_Phone.FieldName = "Supp_Phone";
-            this.colSupp_Phone.MinWidth = 25;
-            this.colSupp_Phone.Name = "colSupp_Phone";
-            this.colSupp_Phone.Visible = true;
-            this.colSupp_Phone.VisibleIndex = 2;
-            this.colSupp_Phone.Width = 94;
-            // 
-            // colSupp_Email
-            // 
-            this.colSupp_Email.FieldName = "Supp_Email";
-            this.colSupp_Email.MinWidth = 25;
-            this.colSupp_Email.Name = "colSupp_Email";
-            this.colSupp_Email.Visible = true;
-            this.colSupp_Email.VisibleIndex = 3;
-            this.colSupp_Email.Width = 94;
-            // 
-            // colSupp_Image
-            // 
-            this.colSupp_Image.FieldName = "Supp_Image";
-            this.colSupp_Image.MinWidth = 25;
-            this.colSupp_Image.Name = "colSupp_Image";
-            this.colSupp_Image.Visible = true;
-            this.colSupp_Image.VisibleIndex = 4;
-            this.colSupp_Image.Width = 94;
             // 
             // panel1
             // 
@@ -204,7 +168,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.tBSuppBindingSource;
+            this.gridControl1.DataSource = typeof(Sales_management_software.DB.TB_Supp);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.tileView1;
@@ -213,10 +177,6 @@
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView1});
-            // 
-            // tBSuppBindingSource
-            // 
-            this.tBSuppBindingSource.DataMember = "TB_Supp";
             // 
             // tileView1
             // 
@@ -239,23 +199,17 @@
             this.tileView1.TileRows.Add(tableRowDefinition2);
             this.tileView1.TileRows.Add(tableRowDefinition3);
             this.tileView1.TileRows.Add(tableRowDefinition4);
-            tileViewItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileViewItemElement1.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement1.Column = this.colSupp_Name;
             tileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
             tileViewItemElement1.Text = "colSupp_Name";
             tileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F);
-            tileViewItemElement2.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement2.Column = this.colSupp_Phone;
             tileViewItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
             tileViewItemElement2.RowIndex = 1;
             tileViewItemElement2.Text = "colSupp_Phone";
             tileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F);
-            tileViewItemElement3.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement3.Column = this.colSupp_Email;
             tileViewItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
@@ -273,6 +227,10 @@
             this.tileView1.TileTemplate.Add(tileViewItemElement3);
             this.tileView1.TileTemplate.Add(tileViewItemElement4);
             // 
+            // tBSuppBindingSource
+            // 
+            this.tBSuppBindingSource.DataMember = "TB_Supp";
+            // 
             // colID
             // 
             this.colID.FieldName = "ID";
@@ -281,6 +239,42 @@
             this.colID.Visible = true;
             this.colID.VisibleIndex = 0;
             this.colID.Width = 94;
+            // 
+            // colSupp_Name
+            // 
+            this.colSupp_Name.FieldName = "Supp_Name";
+            this.colSupp_Name.MinWidth = 25;
+            this.colSupp_Name.Name = "colSupp_Name";
+            this.colSupp_Name.Visible = true;
+            this.colSupp_Name.VisibleIndex = 1;
+            this.colSupp_Name.Width = 94;
+            // 
+            // colSupp_Phone
+            // 
+            this.colSupp_Phone.FieldName = "Supp_Phone";
+            this.colSupp_Phone.MinWidth = 25;
+            this.colSupp_Phone.Name = "colSupp_Phone";
+            this.colSupp_Phone.Visible = true;
+            this.colSupp_Phone.VisibleIndex = 2;
+            this.colSupp_Phone.Width = 94;
+            // 
+            // colSupp_Email
+            // 
+            this.colSupp_Email.FieldName = "Supp_Email";
+            this.colSupp_Email.MinWidth = 25;
+            this.colSupp_Email.Name = "colSupp_Email";
+            this.colSupp_Email.Visible = true;
+            this.colSupp_Email.VisibleIndex = 3;
+            this.colSupp_Email.Width = 94;
+            // 
+            // colSupp_Image
+            // 
+            this.colSupp_Image.FieldName = "Supp_Image";
+            this.colSupp_Image.MinWidth = 25;
+            this.colSupp_Image.Name = "colSupp_Image";
+            this.colSupp_Image.Visible = true;
+            this.colSupp_Image.VisibleIndex = 4;
+            this.colSupp_Image.Width = 94;
             // 
             // FRM_SUPP
             // 
@@ -297,8 +291,8 @@
             this.panel1.PerformLayout();
             this.pn_cat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBSuppBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBSuppBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,13 +309,12 @@
         public System.Windows.Forms.Panel pn_cat;
         private DevExpress.XtraGrid.Views.Tile.TileView tileView1;
         public DevExpress.XtraGrid.GridControl gridControl1;
+      
+        private System.Windows.Forms.BindingSource tBSuppBindingSource;
         private DevExpress.XtraGrid.Columns.TileViewColumn colID;
         private DevExpress.XtraGrid.Columns.TileViewColumn colSupp_Name;
         private DevExpress.XtraGrid.Columns.TileViewColumn colSupp_Phone;
         private DevExpress.XtraGrid.Columns.TileViewColumn colSupp_Email;
         private DevExpress.XtraGrid.Columns.TileViewColumn colSupp_Image;
-      
-        private System.Windows.Forms.BindingSource tBSuppBindingSource;
-        
     }
 }

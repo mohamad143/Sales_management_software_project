@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pn_topbar = new System.Windows.Forms.Panel();
-            this.btn_not = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_login = new DevExpress.XtraEditors.SimpleButton();
             this.lb_title = new System.Windows.Forms.Label();
             this.btn_max = new DevExpress.XtraEditors.SimpleButton();
             this.btn_min = new DevExpress.XtraEditors.SimpleButton();
             this.btn_close = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_home = new DevExpress.XtraEditors.SimpleButton();
             this.pn_navbar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_home = new DevExpress.XtraEditors.SimpleButton();
             this.btn_cat = new DevExpress.XtraEditors.SimpleButton();
             this.btn_sup = new DevExpress.XtraEditors.SimpleButton();
             this.btn_pur = new DevExpress.XtraEditors.SimpleButton();
@@ -46,12 +46,11 @@
             this.btn_sales = new DevExpress.XtraEditors.SimpleButton();
             this.btn_rep = new DevExpress.XtraEditors.SimpleButton();
             this.btn_users = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_settings = new DevExpress.XtraEditors.SimpleButton();
             this.pn_headernavbar = new System.Windows.Forms.Panel();
             this.pn_titlenav = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_UserName = new System.Windows.Forms.Label();
+            this.lb_roll = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bnt_collapse = new DevExpress.XtraEditors.SimpleButton();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,8 +67,8 @@
             // 
             // pn_topbar
             // 
-            this.pn_topbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.pn_topbar.Controls.Add(this.btn_not);
+            this.pn_topbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.pn_topbar.Controls.Add(this.btn_login);
             this.pn_topbar.Controls.Add(this.lb_title);
             this.pn_topbar.Controls.Add(this.btn_max);
             this.pn_topbar.Controls.Add(this.btn_min);
@@ -80,23 +79,25 @@
             this.pn_topbar.Size = new System.Drawing.Size(1030, 56);
             this.pn_topbar.TabIndex = 0;
             // 
-            // btn_not
+            // btn_login
             // 
-            this.btn_not.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_not.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_not.ImageOptions.Image")));
-            this.btn_not.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_not.Location = new System.Drawing.Point(830, 0);
-            this.btn_not.Name = "btn_not";
-            this.btn_not.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_not.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_not.Size = new System.Drawing.Size(50, 56);
-            this.btn_not.TabIndex = 3;
+            this.btn_login.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_login.ImageOptions.Image = global::Sales_management_software.Properties.Resources.assigntome_32x32;
+            this.btn_login.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btn_login.Location = new System.Drawing.Point(830, 0);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btn_login.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_login.Size = new System.Drawing.Size(50, 56);
+            this.btn_login.TabIndex = 3;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lb_title
             // 
             this.lb_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_title.AutoSize = true;
-            this.lb_title.ForeColor = System.Drawing.Color.Silver;
+            this.lb_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lb_title.ForeColor = System.Drawing.Color.Transparent;
             this.lb_title.Location = new System.Drawing.Point(444, 14);
             this.lb_title.Name = "lb_title";
             this.lb_title.Size = new System.Drawing.Size(66, 27);
@@ -142,22 +143,6 @@
             this.btn_close.TabIndex = 5;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // btn_home
-            // 
-            this.btn_home.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_home.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.btn_home.Appearance.Options.UseFont = true;
-            this.btn_home.Appearance.Options.UseForeColor = true;
-            this.btn_home.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.ImageOptions.Image")));
-            this.btn_home.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btn_home.Location = new System.Drawing.Point(3, 3);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_home.Size = new System.Drawing.Size(197, 41);
-            this.btn_home.TabIndex = 2;
-            this.btn_home.Text = "Home";
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
             // pn_navbar
             // 
             this.pn_navbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -171,6 +156,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Controls.Add(this.btn_home);
             this.flowLayoutPanel1.Controls.Add(this.btn_cat);
             this.flowLayoutPanel1.Controls.Add(this.btn_sup);
@@ -179,17 +165,32 @@
             this.flowLayoutPanel1.Controls.Add(this.btn_sales);
             this.flowLayoutPanel1.Controls.Add(this.btn_rep);
             this.flowLayoutPanel1.Controls.Add(this.btn_users);
-            this.flowLayoutPanel1.Controls.Add(this.btn_settings);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 175);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 545);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
+            // btn_home
+            // 
+            this.btn_home.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_home.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
+            this.btn_home.Appearance.Options.UseFont = true;
+            this.btn_home.Appearance.Options.UseForeColor = true;
+            this.btn_home.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.ImageOptions.Image")));
+            this.btn_home.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(3, 3);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btn_home.Size = new System.Drawing.Size(197, 41);
+            this.btn_home.TabIndex = 2;
+            this.btn_home.Text = "Home";
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            // 
             // btn_cat
             // 
             this.btn_cat.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cat.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_cat.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_cat.Appearance.Options.UseFont = true;
             this.btn_cat.Appearance.Options.UseForeColor = true;
             this.btn_cat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_cat.ImageOptions.Image")));
@@ -205,7 +206,7 @@
             // btn_sup
             // 
             this.btn_sup.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sup.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_sup.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_sup.Appearance.Options.UseFont = true;
             this.btn_sup.Appearance.Options.UseForeColor = true;
             this.btn_sup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_sup.ImageOptions.Image")));
@@ -221,7 +222,7 @@
             // btn_pur
             // 
             this.btn_pur.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pur.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_pur.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_pur.Appearance.Options.UseFont = true;
             this.btn_pur.Appearance.Options.UseForeColor = true;
             this.btn_pur.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -237,7 +238,7 @@
             // btn_cus
             // 
             this.btn_cus.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cus.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_cus.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_cus.Appearance.Options.UseFont = true;
             this.btn_cus.Appearance.Options.UseForeColor = true;
             this.btn_cus.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -253,7 +254,7 @@
             // btn_sales
             // 
             this.btn_sales.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sales.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_sales.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_sales.Appearance.Options.UseFont = true;
             this.btn_sales.Appearance.Options.UseForeColor = true;
             this.btn_sales.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -269,7 +270,7 @@
             // btn_rep
             // 
             this.btn_rep.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_rep.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_rep.Appearance.Options.UseFont = true;
             this.btn_rep.Appearance.Options.UseForeColor = true;
             this.btn_rep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep.ImageOptions.Image")));
@@ -285,7 +286,7 @@
             // btn_users
             // 
             this.btn_users.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_users.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.btn_users.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             this.btn_users.Appearance.Options.UseFont = true;
             this.btn_users.Appearance.Options.UseForeColor = true;
             this.btn_users.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.ImageOptions.Image")));
@@ -298,24 +299,9 @@
             this.btn_users.Text = "Users";
             this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
-            // btn_settings
-            // 
-            this.btn_settings.Appearance.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_settings.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.btn_settings.Appearance.Options.UseFont = true;
-            this.btn_settings.Appearance.Options.UseForeColor = true;
-            this.btn_settings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.ImageOptions.Image")));
-            this.btn_settings.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btn_settings.Location = new System.Drawing.Point(3, 379);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_settings.Size = new System.Drawing.Size(197, 41);
-            this.btn_settings.TabIndex = 10;
-            this.btn_settings.Text = "Settings";
-            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
-            // 
             // pn_headernavbar
             // 
+            this.pn_headernavbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.pn_headernavbar.Controls.Add(this.pn_titlenav);
             this.pn_headernavbar.Controls.Add(this.flowLayoutPanel2);
             this.pn_headernavbar.Controls.Add(this.flowLayoutPanel3);
@@ -328,9 +314,10 @@
             // 
             // pn_titlenav
             // 
+            this.pn_titlenav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.pn_titlenav.Controls.Add(this.pictureBox1);
-            this.pn_titlenav.Controls.Add(this.label2);
-            this.pn_titlenav.Controls.Add(this.label3);
+            this.pn_titlenav.Controls.Add(this.lb_UserName);
+            this.pn_titlenav.Controls.Add(this.lb_roll);
             this.pn_titlenav.Location = new System.Drawing.Point(47, 3);
             this.pn_titlenav.Name = "pn_titlenav";
             this.pn_titlenav.Size = new System.Drawing.Size(200, 166);
@@ -345,30 +332,32 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lb_UserName
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(64, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 27);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Bdran";
+            this.lb_UserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_UserName.AutoSize = true;
+            this.lb_UserName.ForeColor = System.Drawing.Color.Red;
+            this.lb_UserName.Location = new System.Drawing.Point(64, 107);
+            this.lb_UserName.Name = "lb_UserName";
+            this.lb_UserName.Size = new System.Drawing.Size(75, 27);
+            this.lb_UserName.TabIndex = 6;
+            this.lb_UserName.Text = "Bdran";
             // 
-            // label3
+            // lb_roll
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(64, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 27);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Admin";
+            this.lb_roll.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_roll.AutoSize = true;
+            this.lb_roll.BackColor = System.Drawing.Color.Yellow;
+            this.lb_roll.ForeColor = System.Drawing.Color.Blue;
+            this.lb_roll.Location = new System.Drawing.Point(64, 134);
+            this.lb_roll.Name = "lb_roll";
+            this.lb_roll.Size = new System.Drawing.Size(81, 27);
+            this.lb_roll.TabIndex = 6;
+            this.lb_roll.Text = "Admin";
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel2.Controls.Add(this.bnt_collapse);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -382,7 +371,6 @@
             this.bnt_collapse.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.bnt_collapse.Location = new System.Drawing.Point(3, 3);
             this.bnt_collapse.Name = "bnt_collapse";
-            this.bnt_collapse.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.bnt_collapse.Size = new System.Drawing.Size(39, 29);
             this.bnt_collapse.TabIndex = 2;
             this.bnt_collapse.Click += new System.EventHandler(this.bnt_collapse_Click);
@@ -443,29 +431,28 @@
         private System.Windows.Forms.Panel pn_navbar;
         private System.Windows.Forms.Panel pn_cont;
         private System.Windows.Forms.Label lb_title;
-        private DevExpress.XtraEditors.SimpleButton btn_home;
         private DevExpress.XtraEditors.SimpleButton btn_min;
         private DevExpress.XtraEditors.SimpleButton btn_max;
         private DevExpress.XtraEditors.SimpleButton btn_close;
         private System.Windows.Forms.Panel pn_headernavbar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton bnt_collapse;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private DevExpress.XtraEditors.SimpleButton btn_cat;
-        private DevExpress.XtraEditors.SimpleButton btn_sup;
-        private DevExpress.XtraEditors.SimpleButton btn_pur;
-        private DevExpress.XtraEditors.SimpleButton btn_cus;
-        private DevExpress.XtraEditors.SimpleButton btn_sales;
-        private DevExpress.XtraEditors.SimpleButton btn_rep;
-        private DevExpress.XtraEditors.SimpleButton btn_users;
-        private DevExpress.XtraEditors.SimpleButton btn_settings;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel pn_titlenav;
-        private DevExpress.XtraEditors.SimpleButton btn_not;
+        private DevExpress.XtraEditors.SimpleButton btn_login;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        public System.Windows.Forms.Label lb_roll;
+        public System.Windows.Forms.Label lb_UserName;
+        public DevExpress.XtraEditors.SimpleButton btn_home;
+        public DevExpress.XtraEditors.SimpleButton btn_cat;
+        public DevExpress.XtraEditors.SimpleButton btn_sup;
+        public DevExpress.XtraEditors.SimpleButton btn_pur;
+        public DevExpress.XtraEditors.SimpleButton btn_cus;
+        public DevExpress.XtraEditors.SimpleButton btn_sales;
+        public DevExpress.XtraEditors.SimpleButton btn_rep;
+        public DevExpress.XtraEditors.SimpleButton btn_users;
     }
 }
 

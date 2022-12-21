@@ -1,4 +1,5 @@
 ﻿using DevExpress.Utils.Extensions;
+using Sales_management_software.DB;
 using Sales_management_software.PL;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,11 @@ namespace Sales_management_software
         PL.FRM_PUR frm_pur= new PL.FRM_PUR();
         PL.FRM_CUS frm_cus= new PL.FRM_CUS();
         PL.FRM_SELL frm_sell= new PL.FRM_SELL();
-        DB_SMPEntities1 db = new DB_SMPEntities1();
+        PL.FRM_Report FRM_Report= new PL.FRM_Report();
+        PL.FRM_Users frm_users= new PL.FRM_Users();
+        TB_Users tb_users = new TB_Users();
+        
+        DB_SMPEntities db = new DB_SMPEntities();
         public Main()
         {
             InitializeComponent();
@@ -79,13 +84,25 @@ namespace Sales_management_software
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_home.pn_home);
+            tb_users = db.TB_Users.Where(x => x.User_State == "True").FirstOrDefault();
+            if (tb_users.User_Roll == "User")
+            {
+                btn_sup.Enabled = false;
+                btn_users.Enabled = false;
+                btn_pur.Enabled = false;
+                frm_home.btn_add_Suppliers.Enabled = false;
+                frm_home.btn_add_pur.Enabled = false;
+                
+
+            }
+
         }
         // load cat 
         private void btn_cat_Click(object sender, EventArgs e)
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_cat.pn_cat);
-            db = new DB_SMPEntities1();
+            db = new DB_SMPEntities();
             lb_title.Text = "categories";
         }
         // load supp
@@ -94,7 +111,7 @@ namespace Sales_management_software
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_supp.pn_cat);
-            db = new DB_SMPEntities1();
+            db = new DB_SMPEntities();
             lb_title.Text = "Suppliers";
         }
         //laod purchases
@@ -103,7 +120,7 @@ namespace Sales_management_software
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_pur.pn_cat);
-            db = new DB_SMPEntities1();
+            db = new DB_SMPEntities();
             lb_title.Text = "Purchases";
         }
         // load customers
@@ -111,7 +128,7 @@ namespace Sales_management_software
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_cus.pn_cat);
-            db = new DB_SMPEntities1();
+            db = new DB_SMPEntities();
             lb_title.Text = "Customers";
         }
         // load sales
@@ -119,23 +136,43 @@ namespace Sales_management_software
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_sell.pn_cat);
-            db = new DB_SMPEntities1();
+            db = new DB_SMPEntities();
             lb_title.Text = "SALES";
         }
 
         private void btn_rep_Click(object sender, EventArgs e)
         {
-
+            pn_cont.Controls.Clear();
+            pn_cont.Controls.Add(FRM_Report.pn_cat);
+            db = new DB_SMPEntities();
+            lb_title.Text = "Reports";
         }
 
         private void btn_users_Click(object sender, EventArgs e)
         {
+            pn_cont.Controls.Clear();
+            pn_cont.Controls.Add(frm_users.pn_cat);
+            db = new DB_SMPEntities();
+            lb_title.Text = "Reports";
 
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            PL.FRM_Login login = new PL.FRM_Login();
+            tb_users = db.TB_Users.Where(x => x.User_State == "True").FirstOrDefault();
+            tb_users.User_State = "False";
+            db.Entry(tb_users).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            this.Enabled = false;
+            login.Show();
+            this.Hide(); 
         }
     }
 }

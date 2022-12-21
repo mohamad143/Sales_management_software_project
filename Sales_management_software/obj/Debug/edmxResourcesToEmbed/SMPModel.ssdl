@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_SMPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_CAT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CAT_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CAT_Cover" Type="image" />
+  </EntityType>
+  <EntityType Name="TB_CuS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cus_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cus_phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cus_location" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cus_image" Type="image" />
+  </EntityType>
+  <EntityType Name="TB_Pur">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cat_id" Type="int" />
+    <Property Name="Supp_id" Type="int" />
+    <Property Name="Pur_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pur_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pur_Cat" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pur_Sup" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pur_Det" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pur_Buy" Type="float" />
+    <Property Name="Pur_Sell" Type="float" />
+    <Property Name="Pur_Qt" Type="float" />
+    <Property Name="Pur_Tsell" Type="float" />
+    <Property Name="Pur_Tbuy" Type="float" />
+    <Property Name="Pur_TRev" Type="float" />
+  </EntityType>
+  <EntityType Name="TB_Sell">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sell_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sell_Cus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sell_price" Type="float" />
+    <Property Name="Sell_Qt" Type="float" />
+    <Property Name="Sell_TPrice" Type="float" />
+    <Property Name="Sell_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TB_Supp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supp_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Supp_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Supp_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Supp_Image" Type="image" />
+  </EntityType>
+  <Association Name="FK_TB_Pur_TB_CAT">
+    <End Role="TB_CAT" Type="Self.TB_CAT" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TB_Pur" Type="Self.TB_Pur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Pur">
+        <PropertyRef Name="Cat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Pur_TB_Supp">
+    <End Role="TB_Supp" Type="Self.TB_Supp" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TB_Pur" Type="Self.TB_Pur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Supp">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_Pur">
+        <PropertyRef Name="Supp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_SMPModelStoreContainer">
+    <EntitySet Name="TB_CAT" EntityType="Self.TB_CAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CuS" EntityType="Self.TB_CuS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Pur" EntityType="Self.TB_Pur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Sell" EntityType="Self.TB_Sell" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Supp" EntityType="Self.TB_Supp" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TB_Pur_TB_CAT" Association="Self.FK_TB_Pur_TB_CAT">
+      <End Role="TB_CAT" EntitySet="TB_CAT" />
+      <End Role="TB_Pur" EntitySet="TB_Pur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Pur_TB_Supp" Association="Self.FK_TB_Pur_TB_Supp">
+      <End Role="TB_Supp" EntitySet="TB_Supp" />
+      <End Role="TB_Pur" EntitySet="TB_Pur" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

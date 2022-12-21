@@ -116,7 +116,6 @@
             this.btn_edit.Size = new System.Drawing.Size(111, 61);
             this.btn_edit.TabIndex = 8;
             this.btn_edit.Text = "Edit";
-            
             // 
             // btn_delete
             // 
@@ -158,7 +157,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(Sales_management_software.TB_Sell);
+            this.gridControl1.DataSource = typeof(Sales_management_software.DB.TB_Sell);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -182,7 +181,6 @@
             // 
             // colSell_Name
             // 
-            this.colSell_Name.Caption = "product name";
             this.colSell_Name.FieldName = "Sell_Name";
             this.colSell_Name.MinWidth = 25;
             this.colSell_Name.Name = "colSell_Name";
@@ -192,7 +190,6 @@
             // 
             // colSell_Cus
             // 
-            this.colSell_Cus.Caption = "customer";
             this.colSell_Cus.FieldName = "Sell_Cus";
             this.colSell_Cus.MinWidth = 25;
             this.colSell_Cus.Name = "colSell_Cus";
@@ -202,7 +199,6 @@
             // 
             // colSell_price
             // 
-            this.colSell_price.Caption = "price";
             this.colSell_price.FieldName = "Sell_price";
             this.colSell_price.MinWidth = 25;
             this.colSell_price.Name = "colSell_price";
@@ -212,7 +208,6 @@
             // 
             // colSell_Qt
             // 
-            this.colSell_Qt.Caption = "Quantity";
             this.colSell_Qt.FieldName = "Sell_Qt";
             this.colSell_Qt.MinWidth = 25;
             this.colSell_Qt.Name = "colSell_Qt";
@@ -222,7 +217,6 @@
             // 
             // colSell_TPrice
             // 
-            this.colSell_TPrice.Caption = "total price";
             this.colSell_TPrice.FieldName = "Sell_TPrice";
             this.colSell_TPrice.MinWidth = 25;
             this.colSell_TPrice.Name = "colSell_TPrice";
@@ -232,7 +226,6 @@
             // 
             // colSell_Date
             // 
-            this.colSell_Date.Caption = "Date";
             this.colSell_Date.FieldName = "Sell_Date";
             this.colSell_Date.MinWidth = 25;
             this.colSell_Date.Name = "colSell_Date";
