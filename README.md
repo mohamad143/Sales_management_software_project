@@ -1,6 +1,6 @@
 # Sales_management_software
 sales management project programmed by C# and some technologies such as WinForms, Entity_Framework, SQL_Server, DevExpress, BunifuLib.
-Through this program, you can record purchases and sales with displaying the stock quantity of materials ,you can add categories and suppliers,you can print reports. In addition,There are two types of users: regular user (worker) and administrator,Each type has different capabilities in control(exp:user cant add a new user but admin can ).  
+Through this program, you can enter and save information of purchases and sales with displaying the stock quantity of materials ,you can add categories and suppliers,you can print reports. In addition,There are two types of users: regular user (worker) and administrator,Each type has different capabilities in control(exp:user cant add a new user but admin can ).  
 
 some notes:
 
