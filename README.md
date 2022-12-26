@@ -6,7 +6,7 @@ some notes:
 
 1)In order for the program to work, some programs and files must be downloaded: download DevExpress, BunifuLib(There is a file that was installed with the program.** file name (Bunifu_UI_v1.52), you just have to install it on (Tools)**).
 
-2)The named database (DB_SMP) must be equipped with its dependent tables in SQL_Server.file name (Tables for the database) to creat them in sql.
+2)The named database (DB_SMP) must be equipped with its dependent tables in SQL_Server.file name (DB_SMP.sql) to creat them in sql.
 
 
 For any problems you encounter, you can contact me by e-mail:bdran1474@gmail.com
